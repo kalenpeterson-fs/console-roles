@@ -1,6 +1,6 @@
-# == Class: roles::pe_masterofmasters
+# == Class: roles::puppet::pe_masterofmasters
 #
-class roles::pe_masterofmasters {
+class roles::puppet::pe_masterofmasters {
   include profiles::puppet::pe_infrastructure
   include profiles::puppet::pe_agent
   include profiles::puppet::pe_certificate_authority

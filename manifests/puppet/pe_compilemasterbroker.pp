@@ -1,6 +1,6 @@
-# == Class: roles::pe_compilemasterbroker
+# == Class: roles::puppet::pe_compilemasterbroker
 #
-class roles::pe_compilemasterbroker {
+class roles::puppet::pe_compilemasterbroker {
   include profiles::puppet::pe_activemq_broker
   include profiles::puppet::pe_infrastructure
   include profiles::puppet::pe_agent
