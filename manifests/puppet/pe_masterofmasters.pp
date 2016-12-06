@@ -29,4 +29,7 @@ class roles::puppet::pe_masterofmasters {
 
   #include profiles::puppet::pe_puppetdb
   include ::puppet_enterprise::profile::puppetdb
+
+  # Manage regular backups of the MoM
+  include ::profiles::puppet::pe_master_backup
 }
