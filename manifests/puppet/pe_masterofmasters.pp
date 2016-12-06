@@ -1,33 +1,33 @@
 # == Class: roles::puppet::pe_masterofmasters
 #
 class roles::puppet::pe_masterofmasters {
-  #include profiles::puppet::pe_infrastructure
+  # PE Infrastructure
   include ::puppet_enterprise
 
-  #include profiles::puppet::pe_agent
+  # PE Agent
   include ::puppet_enterprise::profile::agent
 
-  #include profiles::puppet::pe_certificate_authority
+  # PE Certificate Authority
   include ::puppet_enterprise::profile::certificate_authority
 
-  #include profiles::puppet::pe_console
+  # PE Console
   include ::puppet_enterprise::profile::console
   include ::puppet_enterprise::license
 
-  #include profiles::puppet::pe_master
+  # PE Master
   include ::puppet_enterprise::profile::master
   include ::puppet_enterprise::profile::master::mcollective
   include ::puppet_enterprise::profile::mcollective::peadmin
   include ::pe_repo
   include ::pe_repo::platform::el_7_x86_64
 
-  #include profiles::puppet::pe_mcollective
+  # PE MCollective
   include ::puppet_enterprise::profile::mcollective::agent
 
-  #include profiles::puppet::pe_orchestrator
+  # PE Orchestrator
   include ::puppet_enterprise::profile::orchestrator
 
-  #include profiles::puppet::pe_puppetdb
+  # PE PuppetDB
   include ::puppet_enterprise::profile::puppetdb
 
   # Manage regular backups of the MoM
