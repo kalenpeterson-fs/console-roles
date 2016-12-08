@@ -18,10 +18,7 @@ class roles::puppet::pe_masterofmasters {
   include ::puppet_enterprise::profile::master
   include ::puppet_enterprise::profile::master::mcollective
   include ::puppet_enterprise::profile::mcollective::peadmin
-  include ::pe_repo
-  include ::pe_repo::platform::el_7_x86_64
-  include ::pe_repo::platform::el_6_x86_64
-  include ::pe_repo::platform::el_5_x86_64
+  include ::profiles::puppet::pe_master_repos
 
   # PE MCollective
   include ::puppet_enterprise::profile::mcollective::agent
